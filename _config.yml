@@ -4,7 +4,7 @@ relative_permalinks: true
 
 # Setup
 title:            Zhe Zhang
-# tagline:          The Jekyll Butler
+tagline:          Systems Engineer and Researcher
 url:              http://zhe-thoughts.github.io
 paginate:         1
 baseurl:          /
