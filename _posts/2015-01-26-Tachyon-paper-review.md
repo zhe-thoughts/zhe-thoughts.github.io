@@ -7,4 +7,4 @@ title: Paper review: Tachyon (SoCC '14)
 
 > More importantly, due to the inherent bandwidth limitations of replication, a lineage-based recovery model might be the _only_ way to make cluster storage systems match the speed of in-memory computations in the future. 
 
-Following [Spark](http://spark.apache.org/research.html), Tachyon also assumes an elegant model where datasets are variables connected by closed-form operators (e.g., *map* and *group-by*).
+As part of the "[Spark stack](https://amplab.cs.berkeley.edu/software/)", Tachyon also assumes an elegant *Lambda-calculus-flavored* model, where datasets are variables connected by closed-form operators (e.g., *map* and *group-by*).
