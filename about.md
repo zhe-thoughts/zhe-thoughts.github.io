@@ -7,7 +7,7 @@ title: About
   Engineer and researcher in big data systems. 
 </p>
 
-![alt text][logo]
+![alt text][logo =100x20]
 
 [logo]: https://raw.githubusercontent.com/zhe-thoughts/zhe-thoughts.github.io/master/_figures/logo-2013.png
 
