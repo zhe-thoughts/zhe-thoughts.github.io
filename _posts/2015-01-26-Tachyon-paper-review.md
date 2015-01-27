@@ -11,7 +11,14 @@ Extending from "[Spark](http://spark.apache.org/research.html)", Tachyon also as
 
 The results are amazing: Spark allows you to program with PB-sized variables; and Tachyon provides a name space for those variables to be shared among applications. In short, **the cluster becomes your computer**. 
 
-## How significant and fundamental are
-The initial idea of Spark was similar to [MapReduce Online](https://code.google.com/p/hop/). However, the **lineage-based optimistic fault tolerance** model greatly generalized and *externalized* inter-job intermediate results, bringing them to the unprecedented stage of programmable units.
+## My assessment
+The initial idea of Spark was similar to [MapReduce Online](https://code.google.com/p/hop/). However, the lineage-based optimistic fault tolerance model greatly generalized and *externalized* inter-job intermediate results, bringing them to the unprecedented stage of programmable units. This is truly a breakthrough in distributed computing.
+
+Tachyon itself makes 2 new contributions, as outlined in the abstract:
+
+> The key challenge in making a long-running lineage-based storage system is timely data recovery in case of failures. Tachyon addresses this issue by introducing a *checkpointing algorithm* that guarantees bounded recovery cost and *resource allocation strategies* for recomputation under commonly used resource schedulers.
+
+Both are solid contributions around better *prioritization* of fault tolerance tasks. Certainly not as fundamental as Spark, but critical in adopting the main idea to the file system context.
 
 ## Limitations
+Tachyon should work well as long as the basic assumption holds: datasets are connected by closed-form *jobs*. In general, this should hold for most analytical workloads. But how about transactions, like HBase? The *job* binary -- describing a newly inserted value -- will be as large as the data itself.
