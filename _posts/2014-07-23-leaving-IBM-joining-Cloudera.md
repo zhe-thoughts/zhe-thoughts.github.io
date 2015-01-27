@@ -18,9 +18,11 @@ During my 3.5 years at IBM Research I have worked on VM provisioning, cloud BFT,
 1. The "real scientists" running around the lab in white coats. Seriously, I will miss the resourcefulness -- you can grab an expert in any area (you name it, material science, partial differential equations, ...) if your project needs. 
 1. The close connections with academia.
 1. The T. J. Watson Center. The remarkable building, the beautiful library, and neat offices.
+
 ## Things I won't miss about IBM Research:
 1. "Welcome to the teleconference service, please enter your access code" ... "There are   17 participants on the call, you are joining as a participant". Seriously, there are just so many hour-long meetings where you only speak for 5 seconds.
 1. Having to pay for coffee, having to use 4 year old laptop, having to try so hard to get a 23'' monitor. The HR department just doesn't consider it a priority to enhance employee morale and productivity.
+
 ## Things I look forward to about Cloudera:
 1. The "hacker mentality" and pride as a hardcore engineer.
 1. A zoomed-in view of how people are using large distributed storage systems in production.
