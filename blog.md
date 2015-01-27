@@ -20,16 +20,16 @@ title: Home
 </div>
 
 <div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% if site.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{site.next_page}}">Older</a>
   {% else %}
     <span class="pagination-item older">Older</span>
   {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
+  {% if site.previous_page %}
+    {% if site.page == 2 %}
       <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
     {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{site.previous_page}}">Newer</a>
     {% endif %}
   {% else %}
     <span class="pagination-item newer">Newer</span>
