@@ -1,37 +1,14 @@
 ---
-layout: default
-title: Home
+layout: page
+title: About
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<p class="message">
+Engineer and researcher in big data systems.
+</p>
 
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+![Zhe logo](https://raw.githubusercontent.com/zhe-thoughts/zhe-thoughts.github.io/master/_figures/logo-2013.png)
 
-    {{ post.content }}
-  </article>
-  {% endfor %}
-</div>
+I was born in the Xi'An city in northwestern China, and did my undergraduate study in the [University of Science and Technology of China](http://www.ustc.edu.cn/). In 2004 I started graduate school at the [North Carolina State University](http://www.ncsu.edu) co-majoring in Operations Research and Computer Science. After finishing my Ph.D. study in the [PALM](http://research.csc.ncsu.edu/palm/index.htm) research group led by Dr. [Xiaosong Ma](http://qcri.org.qa/page?a=117&name=Xiaosong_Ma&pid=154&lang=en-CA) in November 2009, I worked in the [Technology Integration Group](http://techint.nccs.gov/) in the [Oak Ridge National Laboratory](http://www.ornl.gov) as a staff scientist for one year. In November 2010 I joined the [IBM T. J. Watson Research Center](http://www.research.ibm.com/labs/watson/) as a research staff member, where I worked on cloud computing technologies with a focus on SaaS/PaaS offerings. At IBM Research I co-chaired the Professional Interest Community (PIC) in [Storage Systems](http://researcher.watson.ibm.com/researcher/view_group.php?id=155). My work received IBM Research Accomplishment Award and Outstanding Technology Achievement Award in 2013.
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+I'm currently a software engineer at [Cloudera](www.cloudera.com) working on [HDFS](http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html). 
