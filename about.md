@@ -7,24 +7,7 @@ title: About
   Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
 </p>
 
-In the novel, *The Strange Case of Dr. Jekyll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I was born in the Xi'An city in northwestern China, and did my undergraduate study in the [University of Science and Technology of China | http://www.ustc.edu.cn/]. In 2004 I started graduate school at the [North Carolina State University | http://www.ncsu.edu] co-majoring in Operations Research and Computer Science. After finishing my Ph.D. study in the [PALM 
+| http://research.csc.ncsu.edu/palm/index.htm] research group led by Dr. [Xiaosong Ma | http://qcri.org.qa/page?a=117&name=Xiaosong_Ma&pid=154&lang=en-CA] in November 2009, I worked in the [Technology Integration Group | http://techint.nccs.gov/] in the [Oak Ridge National Laboratory | http://www.ornl.gov] as a staff scientist for one year. In November 2010 I joined the [IBM T. J. Watson Research Center | http://www.research.ibm.com/labs/watson/] as a research staff member, where I worked on cloud computing technologies with a focus on SaaS/PaaS offerings. At IBM Research I co-chaired the Professional Interest Community (PIC) in [Storage Systems | http://researcher.watson.ibm.com/researcher/view_group.php?id=155]. My work received IBM Research Accomplishment Award and Outstanding Technology Achievement Award in 2013.
 
-There are currently two themes built on Poole:
-
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+I'm currently a software engineer at [Cloudera | www.cloudera.com] working on [HDFS | http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html]. 
