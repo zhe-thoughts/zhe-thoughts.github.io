@@ -22,3 +22,5 @@ Both are solid contributions around better *prioritization* of fault tolerance t
 
 ## Limitations
 Tachyon should work well as long as the basic assumption holds: datasets are connected by closed-form *jobs*. In general, this should hold for most analytical workloads. But how about transactions, like HBase? The *job* binary -- describing a newly inserted value -- will be as large as the data itself.
+
+{% include twitter_plug.html %}
