@@ -26,3 +26,5 @@ During my 3.5 years at IBM Research I have worked on VM provisioning, cloud BFT,
 ## Things I look forward to about Cloudera:
 1. The "hacker mentality" and pride as a hardcore engineer.
 1. A zoomed-in view of how people are using large distributed storage systems in production.
+
+{% include twitter_plug.html %}
