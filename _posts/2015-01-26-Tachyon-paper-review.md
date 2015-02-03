@@ -14,7 +14,7 @@ Under this elegant assumption, Spark allows you to program with PB-sized variabl
 Tachyon has a simple API:
 
 | Signature        | Return |
-| ------------- |:-------------:|
+| ------------- |-------------|
 | ```createDependency(inputFiles, outputFiles, binaryPrograms, config, dependencyType)```     | ```lineageID``` |
 | ```getDependency(lineageId)```  | Dependency Info      |
 
