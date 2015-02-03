@@ -18,7 +18,8 @@ Tachyon has a simple API:
 | createDependency(inputFiles, outputFiles, binaryPrograms, config, dependencyType)     | lineage ID |
 | getDependency(lineageId)     | Dependency Info      |
 
-Of course the {{binaryProgram}}
+Of course the ```binaryProgram``` needs to be deterministic. 
+
 ## Limitations
 Tachyon should work well as long as the basic assumption holds: datasets are connected by closed-form *jobs*. In general, this should hold for most analytical workloads. But how about transactional workloads such as the ones supported by HBase? The *job* binary -- describing a newly inserted value -- will be as large as the data itself.
 
