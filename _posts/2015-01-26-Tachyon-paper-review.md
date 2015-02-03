@@ -15,8 +15,8 @@ Tachyon has a simple API:
 
 | Signature        | Return |
 | ------------- |:-------------:|
-| createDependency(inputFiles, outputFiles, binaryPrograms, config, dependencyType)     | lineage ID |
-| getDependency(lineageId)     | Dependency Info      |
+| ```createDependency(inputFiles, outputFiles, binaryPrograms, config, dependencyType)```     | ```lineageID``` |
+| ```getDependency(lineageId)```  | Dependency Info      |
 
 Of course the ```binaryProgram``` needs to be deterministic. 
 
