@@ -21,9 +21,13 @@ Tachyon has a simple API:
 Of course the ```binaryProgram``` needs to be deterministic. 
 
 ## Limitations
-Tachyon should work well as long as the basic assumption holds: datasets are connected by closed-form *jobs*. In general, this should hold for most analytical workloads. But how about transactional workloads such as the ones supported by HBase? The *job* binary -- describing a newly inserted value -- will be as large as the data itself.
+In principle, Tachyon should work well as long as the basic assumption holds: datasets are connected by closed-form *jobs*. In general, this should hold for most analytical workloads. But how about transactional workloads such as the ones supported by HBase? The *job* binary -- describing a newly inserted value -- will be as large as the data itself.
 
-Data serialization 
+As mentioned in the paper, data **serialization** is also a fundamental bottleneck. Here's a back-of-the-envelop calculation based on Figures 7 and 8 from the paper: if the _theoretical upper bound_ of replication is 2.5x faster than _MemHDFS_ (0.5GBps / 0.14GBps), then it should be able to catch up with Tachyon in the real workload tests.
+
+> With Tachyon, the main overhead was serialization and de-serialization since we used the Hadoop TextInputFormat. With a more efficient serialization format, the performance gap is larger.
+
+The lineage-based recovery model also contradicts with a file system user's **expectations**.
 
 ## My assessment
 The initial idea of Spark was similar to [MapReduce Online](https://code.google.com/p/hop/). However, the lineage-based optimistic fault tolerance model greatly generalized and *externalized* inter-job intermediate results, bringing them to the unprecedented stage of programmable units. This is a breakthrough in distributed computing.
