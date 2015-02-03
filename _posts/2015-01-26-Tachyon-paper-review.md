@@ -11,16 +11,18 @@ Extending from "[Spark](http://spark.apache.org/research.html)", Tachyon also as
 
 Under this elegant assumption, Spark allows you to program with PB-sized variables; and Tachyon provides a name space for those variables to be shared among applications. The programming model becomes much more flexible than _MapReduce_.
 
-Tachyon's API is quite simple:
+Tachyon has a simple API:
 
 | Signature        | Return |
 | ------------- |:-------------:|
 | createDependency(inputFiles, outputFiles, binaryPrograms, config, dependencyType)     | lineage ID |
 | getDependency(lineageId)     | Dependency Info      |
 
-
+Of course the {{binaryProgram}}
 ## Limitations
-Tachyon should work well as long as the basic assumption holds: datasets are connected by closed-form *jobs*. In general, this should hold for most analytical workloads. But how about transactions, like HBase? The *job* binary -- describing a newly inserted value -- will be as large as the data itself.
+Tachyon should work well as long as the basic assumption holds: datasets are connected by closed-form *jobs*. In general, this should hold for most analytical workloads. But how about transactional workloads such as the ones supported by HBase? The *job* binary -- describing a newly inserted value -- will be as large as the data itself.
+
+Data serialization 
 
 ## My assessment
 The initial idea of Spark was similar to [MapReduce Online](https://code.google.com/p/hop/). However, the lineage-based optimistic fault tolerance model greatly generalized and *externalized* inter-job intermediate results, bringing them to the unprecedented stage of programmable units. This is a breakthrough in distributed computing.
