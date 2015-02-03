@@ -11,14 +11,20 @@ Extending from "[Spark](http://spark.apache.org/research.html)", Tachyon also as
 
 Under this elegant assumption, Spark allows you to program with PB-sized variables; and Tachyon provides a name space for those variables to be shared among applications. The programming model becomes much more flexible than _MapReduce_.
 
-Tachyon has a simple API:
+## Details
+
+Tachyon has a simple **API**:
 
 | Signature        | Return |
 | ------------- |-------------|
 | ```createDependency(inputFiles, outputFiles, binaryPrograms, config, dependencyType)```     | ```lineageID``` |
 | ```getDependency(lineageId)```  | Dependency Info      |
 
-Of course the ```binaryProgram``` needs to be deterministic. 
+Of course the ```binaryProgram``` needs to be deterministic and ```inputFiles``` need to be immutable.
+
+Files are first stored in the memory-based **lineage layer** and then **checkpointed** in the disk-based **persistence layer**. If the lineage layer gets full, files are also evicted to the persistence layer following LRU policy by default.
+
+Checkpoints are created in the background. _Edge_ files and hot files are given priority to be checkpointed.
 
 ## Limitations
 In principle, Tachyon should work well as long as the basic assumption holds: datasets are connected by closed-form *jobs*. In general, this should hold for most analytical workloads. But how about transactional workloads such as the ones supported by HBase? The *job* binary -- describing a newly inserted value -- will be as large as the data itself.
