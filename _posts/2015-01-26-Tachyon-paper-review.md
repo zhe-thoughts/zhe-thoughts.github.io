@@ -15,8 +15,8 @@ Tachyon's API is quite simple:
 
 | Signature        | Return |
 | ------------- |:-------------:|
-| createDependency(inputFiles, output- Files, binaryPrograms, executionCon- figuration, dependencyType)     | right-aligned |
-| col 2 is      | centered      |
+| createDependency(inputFiles, outputFiles, binaryPrograms, config, dependencyType)     | lineage ID |
+| getDependency(lineageId)     | Dependency Info      |
 
 
 ## Limitations
