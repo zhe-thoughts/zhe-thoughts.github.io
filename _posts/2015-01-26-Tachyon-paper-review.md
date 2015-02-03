@@ -36,7 +36,7 @@ As mentioned in the paper, data **serialization** is also a fundamental bottlene
 The lineage-based recovery model also contradicts with a file system user's **expectations**. For example, it would surprise many applications to get a 1-minute latency (even occasionally) to read a small piece from a file.
 
 ## My assessment
-The initial idea of Spark was similar to [MapReduce Online](https://code.google.com/p/hop/). However, the lineage-based optimistic fault tolerance model greatly generalized and *externalized* inter-job intermediate results, bringing them to the unprecedented stage of programmable units. This is a breakthrough in distributed computing.
+The initial idea of Spark was similar to [MapReduce Online](https://code.google.com/p/hop/). However, the lineage-based optimistic fault tolerance model greatly generalized and *externalized* intra-job intermediate results, bringing them to the unprecedented stage of programmable units. This is a breakthrough in distributed computing.
 
 Tachyon itself makes 2 new contributions, as outlined in the abstract:
 
