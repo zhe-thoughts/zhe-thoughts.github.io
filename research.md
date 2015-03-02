@@ -9,6 +9,12 @@ title: Research Profile
 
 [Full list](https://scholar.google.com/citations?user=21fWeu8AAAAJ) powered by Google scholars.
 
+### Ongoing Projects:
+* **HDFS erasure coding**
+** Presented as WiP and poster at USENIX FAST '15
+* **Programmable file system metadata**
+** Presented as WiP at ACM SOSP '13
+
 ### Selected Professional Activities:
 * TPC member, Doctoral Symposium of ACM/IEEE CCGrid 2015
 * Finance Chair, IEEE IC2E (International Conference on Cloud Engineering) 2014
