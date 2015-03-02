@@ -11,9 +11,9 @@ title: Research Profile
 
 ### Ongoing Projects:
 * **HDFS erasure coding**
-** Presented as WiP and poster at USENIX FAST '15
+  - Presented as WiP and poster at USENIX FAST '15
 * **Programmable file system metadata**
-** Presented as WiP at ACM SOSP '13
+  - Presented as WiP at ACM SOSP '13
 
 ### Selected Professional Activities:
 * TPC member, Doctoral Symposium of ACM/IEEE CCGrid 2015
