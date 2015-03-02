@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research
+title: Research Profile
 ---
 ### Selected Publications:
 * [**Middleware '13**] *VMAR: Optimizing I/O Performance and Resource Utilization in the Cloud*, by Zhiming Shen, _Zhe Zhang_, Andrzej Kochut, Alexi Karve, Han Chen, Minkyong Kim, Hui Lei and Nicholas Fuller
