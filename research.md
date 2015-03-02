@@ -10,7 +10,7 @@ title: Research Profile
 [Full list](https://scholar.google.com/citations?user=21fWeu8AAAAJ) powered by Google scholars.
 
 ### Ongoing Projects:
-* **HDFS erasure coding**
+* **[HDFS erasure coding](https://issues.apache.org/jira/browse/HDFS-7285)**
   - Presented as WiP and poster at USENIX FAST '15
 * **Programmable file system metadata**
   - Presented as WiP at ACM SOSP '13
