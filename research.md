@@ -8,3 +8,8 @@ title: Research
 * [**EuroSys '09**] *Memory Resource Allocation for File System Prefetching: from a Supply Chain Management Perspective*, by _Zhe Zhang_, Amit Kulkarni, Xiaosong Ma and Yuanyuan Zhou
 
 [Full list](https://scholar.google.com/citations?user=21fWeu8AAAAJ) powered by Google scholars.
+
+### Selected Professional Activities:
+* TPC member, Doctoral Symposium of ACM/IEEE CCGrid 2015
+* Finance Chair, IEEE IC2E (International Conference on Cloud Engineering) 2014
+* TPC member, IEEE IPDPS 2012
