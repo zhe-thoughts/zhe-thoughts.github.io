@@ -16,6 +16,7 @@ title: Research Profile
   - Presented as WiP at ACM SOSP '13
 
 ### Selected Professional Activities:
+* TPC member, IEEE CLOUD 2015
 * TPC member, Doctoral Symposium of ACM/IEEE CCGrid 2015
 * Finance Chair, IEEE IC2E (International Conference on Cloud Engineering) 2014
 * TPC member, IEEE IPDPS 2012
