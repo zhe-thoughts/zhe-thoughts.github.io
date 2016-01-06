@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Java byte array vs. ```ByteBuffer```
+title: Java byte array vs. ByteBuffer
 ---
 
 This is a quick note comparing arrays and (direct / indirect) ```ByteBuffer```. So basically, ```Buffer``` is an abstraction using which to prepare data for channel-based I/O. ```ByteBuffer``` is a subtype offering byte-oriented operations.
