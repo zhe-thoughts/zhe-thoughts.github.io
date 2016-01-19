@@ -26,7 +26,7 @@ Several talks and posters were dedicated to Succint, an in-memory compression fo
 I don't have deep ML background and therefore received most ML talks conceptually. The *Helio* project aims to create a platform where a data owner can specify which portion (e.g. columns) of their data can be queries, and what degree of aggregation can be output. The *CoCoA* and *Stumptown* projects are optimizations which tunes the ratio of local computation and global communication. *KeystoneML* is a general platform for data scientists to easily write ML applications.
 
 #### Dinner Discussion
-It was a good idea that dinner tables were divided as "interest groups". Myself and David Alves sat in a "System" table. Two topics that I found most interesting: 
+It was a good idea that dinner tables were divided as "interest groups". Myself and [David Alves](@dribeiroalves) sat in a "System" table. Two topics that I found most interesting: 
 
 1. What are good use cases of fresh data? In both stock trading and auto-driving, fresh data is very important. What properties in an application cause so? Can we discover more applications where fresh data makes big impact?
 2. When should we push computation to the "edge"? Edge computing is faster and more secure. But how to balance the model accuracy?
