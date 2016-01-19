@@ -22,6 +22,13 @@ So their goal is to win along every dimension on the spetrum ("Spark-like functi
 #### [Succint](https://amplab.cs.berkeley.edu/publication/succinct-enabling-queries-on-compressed-data/)
 Several talks and posters were dedicated to Succint, an in-memory compression format. The project already has a published paper so I won't go into too much details. The presentation was of high quality and worth watching. First time for me to learn that Succint optimizes for *point queries* while sacrificing scan-based queries. This means users have to determine their workloads before-hand and decide whether to use Succint. Succint-Spark package is already GA. The current plan is to enable more features, including regex search, graph search and so forth. They are also building an enryption-compression solution. The technique is mini-batching (compress and encrypt a number of rows) with some empirical parameter tuning.
 
-####Machine Learning
+#### Machine Learning
+I don't have deep ML background and therefore received most ML talks conceptually. The *Helio* project aims to create a platform where a data owner can specify which portion (e.g. columns) of their data can be queries, and what degree of aggregation can be output. The *CoCoA* and *Stumptown* projects are optimizations which tunes the ratio of local computation and global communication. *KeystoneML* is a general platform for data scientists to easily write ML applications.
+
+#### Dinner Discussion
+It was a good idea that dinner tables were divided as "interest groups". Myself and David Alves sat in a "System" table. Two topics that I found most interesting: 
+
+1. What are good use cases of fresh data? In both stock trading and auto-driving, fresh data is very important. What properties in an application cause so? Can we discover more applications where fresh data makes big impact?
+2. When should we push computation to the "edge"? Edge computing is faster and more secure. But how to balance the model accuracy?
 
 {% include twitter_plug.html %}
