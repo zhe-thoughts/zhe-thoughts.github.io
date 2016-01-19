@@ -6,7 +6,8 @@ UC Berkeley AMPLab generously hosts annual retreats to present early-stage resea
 
 This is my summary from attending the event:
 
-**New Lab**: The most interesting topic was the annoucement of a new lab to succeed the current AMPLab. From my understanding, this succession includes a new name (to be determined) and a new theme. Ion Stoica presented a number of visions under three highlighted points:
+#### New Lab
+The most interesting topic was the annoucement of a new lab to succeed the current AMPLab. From my understanding, this succession includes a new name (to be determined) and a new theme. Ion Stoica presented a number of visions under three highlighted points:
 
 1. Decision latency
 2. Data freshness
@@ -18,8 +19,9 @@ Their goal is to create a general platform -- can be seen as next Spark -- to su
 
 So their goal is to win along every dimension on the spetrum ("Spark-like functionality with 100x lower latency on 10x fresher data, with strong security").
 
-**[Succint](https://amplab.cs.berkeley.edu/publication/succinct-enabling-queries-on-compressed-data/)**: Several talks and posters were dedicated to Succint, an in-memory compression format. The project already has a published paper so I won't go into too much details. The presentation was of high quality and worth watching. First time for me to learn that Succint optimizes for *point queries* while sacrificing scan-based queries. This means users have to determine their workloads before-hand and decide whether to use Succint. Succint-Spark package is already GA. The current plan is to enable more features, including regex search, graph search and so forth. They are also building an enryption-compression solution. The technique is mini-batching (compress and encrypt a number of rows) with some empirical parameter tuning.
+#### [Succint](https://amplab.cs.berkeley.edu/publication/succinct-enabling-queries-on-compressed-data/)
+Several talks and posters were dedicated to Succint, an in-memory compression format. The project already has a published paper so I won't go into too much details. The presentation was of high quality and worth watching. First time for me to learn that Succint optimizes for *point queries* while sacrificing scan-based queries. This means users have to determine their workloads before-hand and decide whether to use Succint. Succint-Spark package is already GA. The current plan is to enable more features, including regex search, graph search and so forth. They are also building an enryption-compression solution. The technique is mini-batching (compress and encrypt a number of rows) with some empirical parameter tuning.
 
-**Machine Learning**:
+####Machine Learning
 
 {% include twitter_plug.html %}
