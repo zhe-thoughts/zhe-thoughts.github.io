@@ -1,6 +1,6 @@
----
+ ---
 layout: post
-title: Note: AMPLab Winter Retreat
+title: Notes from AMPLab Winter Retreat
 ---
 UC Berkeley AMPLab generously hosts annual retreats to present early-stage research work. It also serves as a venue for collaborators from the acdemia and industries to exchange ideas. This year's winter retreat was held at the Granlibakken resort in Tahoe City. Very good ski resort for beginners and families with young kids.
 
