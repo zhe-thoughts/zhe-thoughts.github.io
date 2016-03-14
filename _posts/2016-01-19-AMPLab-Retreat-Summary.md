@@ -1,4 +1,4 @@
- ---
+---
 layout: post
 title: Notes from AMPLab Winter Retreat
 ---
