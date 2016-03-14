@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Paper review: Tachyon (SoCC '14)
+title: Paper review of Tachyon (SoCC '14)
 ---
 ## Summary
 [Tachyon](https://amplab.cs.berkeley.edu/publication/tachyon-socc/) is a distributed caching layer on top of disk-based file systems such as HDFS or GlusterFS. The core idea is to use lineage to provide **lightweight, optimistic fault tolerance**. 
