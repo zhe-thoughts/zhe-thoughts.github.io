@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to run a Hadoop Cluster from IntelliJ
+title: Run a Hadoop Cluster from IntelliJ
 ---
 
 As part of [HDFS-10534](https://issues.apache.org/jira/browse/HDFS-10534), which involves a web interface change, I spent a few hours today finding a way to quickly verify the UI change with different patch versions.
