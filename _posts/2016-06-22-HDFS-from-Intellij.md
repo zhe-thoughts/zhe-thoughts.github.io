@@ -14,6 +14,7 @@ I only tried actually starting the HDFS part, and will describe the experience i
 
 ### Configurations
 The first thing to do is to put a ```hdfs-site.xml``` configuration file on the class path. It should at least specify the default filesystem URI:
+
 ```
 <configuration>
   <property>
