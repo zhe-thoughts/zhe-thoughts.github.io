@@ -14,6 +14,18 @@ Above being said, a lot still remains to be done on Apache Hadoop, which has jus
 #### _Scalability_
 Apache Hadoop was initially designed with a single-master architecture. Many global-scale companies are deploying clusters with 5k to 10k nodes, and scalability is becoming a severe constraint.
 
+Multi-DC HDFS talk from Twitter:
+* Twitter's production Hadoop environment has multiple logical clusters in each DC
+* Logical clusters are functionally-partitioned: ad hoc, stable production jobs, etc.
+* Each logical cluster has 3 nameservices: ```/tmp```, ```/user```, ```/log```
+* Each ```DataNode``` belongs to all 3 nameservices
+* The replication protocol, ```Nfly```, is only used by jobs with small data volumes. It has a ```/nfly/``` prefix
+* ```Nfly``` could leave orphan temporary files behind. They'll be cleaned up by retention program.
+
+Small file analysis talk from Expedia:
+* Built a tool, based on ```fsimage```, to detect and categorize small files
+* Different approaches -- compaction, deletion, archival -- based on category
+
 YARN federation talk from Microsoft:
 * MSFT has made a lot of efforts in YARN and most of them are open source
 * [YARN-2915](https://issues.apache.org/jira/browse/YARN-2915) tracks the effort
@@ -21,15 +33,19 @@ YARN federation talk from Microsoft:
 * MSFT has several 50k-node clusters, and run many short-lived jobs (a few seconds)
 * Federation is not only for scalability, but also for cross-DC queries
 * Architecture is based on ```Router``` + ```StateStore```
+* Every node has a ```AM-RM-Proxy```
+* Different routing policies can be used, leading to interesting trade-offs
 
-Multi-DC HDFS talk from Twitter:
-
-Small file analysis talk from Expedia:
+YARN timeline service v2 talk from Twitter
+* TLS v1 has a single server and single LevelDB
+* TLS v2 uses HBase, has metrics aggregation, and offers richer query APIs
 
 #### _Cloud_
 Although on-premise datacenters still run the lion's share of Hadoop deployments, it is an obvious trend to move big data workloads to public cloud.
 
-#### _Everything Else_
+HDFS and object storage talk from Hortonworks:
+
+#### _General Improvements_
 
 ### SQL
 
