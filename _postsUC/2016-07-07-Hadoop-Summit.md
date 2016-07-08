@@ -6,7 +6,7 @@ title: Notes from Hadoop Summit 2016
 Having worked on Hadoop for 2 years, this is my first Hadoop Summit -- will be the only one as well, because the conference will be rebranded as *Dataworks Summit* next year. It took place in San Jose Convention Center from Tuesday 6/28 to Thursday 6/30. This post summarizes my key takeaways.
 
 ### Hadoop and Beyond
-The rebranding as well as the conference [agenda](http://hadoopsummit.org/san-jose/agenda/) suggest a trend to focus more on the application layer (what can be done with Hadoop) instead of the low level technologies.
+The rebranding as well as the conference [agenda](http://hadoopsummit.org/san-jose/agenda/) suggest a trend to focus more on the application layer (what can be done with Hadoop) instead of the low level technologies. 
 
 ### HDFS and YARN
 Above being said, a lot still remains to be done on Apache Hadoop, which has just turned 10 years old. From what I saw, scalability and cloud integration are the two focus areas this year.
@@ -41,11 +41,25 @@ YARN timeline service v2 talk from Twitter
 * TLS v2 uses HBase, has metrics aggregation, and offers richer query APIs
 
 #### _Cloud_
-Although on-premise datacenters still run the lion's share of Hadoop deployments, it is an obvious trend to move big data workloads to public cloud.
+Although on-premise datacenters still run the lion's share of Hadoop deployments, it is an obvious trend to move big data workloads to public or private cloud platforms.
+
+HDFS tiered storage talk from Microsoft (AKA Tachyon / Alluxio done right):
+* The community has long discussed approaches to "stage" or "page" part of the data / metadata to external store
+* The key idea here is to generalize the block concept and introduce a PROVIDED block type
+* DN will run daemon for the actual data transfer
+* When used together with HDInsight, computation and data "jobs" will be co-scheduled to achieve just-in-time data staging.
+* Many smart algorithms can be considered for eviction and prediction-based prefetching
 
 HDFS and object storage talk from Hortonworks:
 
+Operationalizing YARN in the cloud talk from Qubole: [to be added]
+
 #### _General Improvements_
+
+Over-committing YARN resources talk from Yahoo:
+* A lot of jobs are poorly configured, causing resources wastage
+* Static overcommit (configure containers to use more than OS offers) doesn't work just like "over-selling flight tickets"
+* ```NodeManager``` reports utlization to ```ResourceManager``` via heartbeats, to facilitate dynamic overcommitting
 
 ### SQL
 
