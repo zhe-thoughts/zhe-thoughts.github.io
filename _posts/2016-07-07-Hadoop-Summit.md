@@ -17,19 +17,19 @@ Above being said, a lot still remains to be done on Apache Hadoop, which has jus
 Apache Hadoop was initially designed with a single-master architecture. Many global-scale companies are deploying clusters with 5k to 10k nodes, and scalability is becoming a severe constraint.
 
 [Multi-DC HDFS](https://youtu.be/cUgfor9vgIM) talk from Twitter:
-* Twitter's production Hadoop environment has multiple logical clusters in each DC
-* Logical clusters are functionally-partitioned: ad hoc, stable production jobs, etc.
-* Each logical cluster has 3 nameservices: ```/tmp```, ```/user```, ```/log```
-* Each ```DataNode``` belongs to all 3 nameservices
-* The replication protocol, ```Nfly```, is only used by jobs with small data volumes. It has a ```/nfly/``` prefix
-* ```Nfly``` could leave orphan temporary files behind. They'll be cleaned up by retention program.
+1. Twitter's production Hadoop environment has multiple logical clusters in each DC
+1. Logical clusters are functionally-partitioned: ad hoc, stable production jobs, etc.
+1. Each logical cluster has 3 nameservices: ```/tmp```, ```/user```, ```/log```
+1. Each ```DataNode``` belongs to all 3 nameservices
+1. The replication protocol, ```Nfly```, is only used by jobs with small data volumes. It has a ```/nfly/``` prefix
+1. ```Nfly``` could leave orphan temporary files behind. They'll be cleaned up by retention program.
 
 [Multi-tenancy Support from HDFS](https://youtu.be/gleiuQh9lDQ) talk from Hortonworks:
-* Mainly focusing on ```RPC``` scalability on ```NameNode```
-* Interesting work on [HADOOP-13128](https://issues.apache.org/jira/browse/HADOOP-13128) about using "coupon", or reservation, to achieve better SLAs.
-* Isolating applications from ```DataNode```: [HDFS-9239](https://issues.apache.org/jira/browse/HDFS-9239)
-* ```FairCallQueue``` implements YARN-style fairness: [HADOOP-9640](https://issues.apache.org/jira/browse/HADOOP-9640)
-* Community's long term vision is to cosolidate HDFS requests under the control of YARN
+1. Mainly focusing on ```RPC``` scalability on ```NameNode```
+1. Interesting work on [HADOOP-13128](https://issues.apache.org/jira/browse/HADOOP-13128) about using "coupon", or reservation, to achieve better SLAs.
+1. Isolating applications from ```DataNode```: [HDFS-9239](https://issues.apache.org/jira/browse/HDFS-9239)
+1. ```FairCallQueue``` implements YARN-style fairness: [HADOOP-9640](https://issues.apache.org/jira/browse/HADOOP-9640)
+1. Community's long term vision is to cosolidate HDFS requests under the control of YARN
 
 [Small file analysis](https://youtu.be/ci6KwUDl6Ks) talk from Expedia:
 * Built a tool, based on ```fsimage```, to detect and categorize small files
