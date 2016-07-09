@@ -58,6 +58,7 @@ Apache Hadoop was initially designed with a single-master architecture. Many glo
 Although on-premise datacenters still run the lion's share of Hadoop deployments, it is an obvious trend to move big data workloads to public or private cloud platforms. ```HDInsight``` was mentioned a lot.
 
 [HDFS tiered storage](https://youtu.be/bD-h-PE73VQ) talk from Microsoft (AKA Tachyon-done-right):
+
 * Emphasizes the problem of multiple clusters (even before moving to cloud)
 * Compared to other approaches (```DistCp```, application-manage multi-DC access), transparency is big win
 * The community has long discussed approaches to "stage" or "page" part of the data / metadata to external store
@@ -67,6 +68,7 @@ Although on-premise datacenters still run the lion's share of Hadoop deployments
 * Many smart algorithms can be considered for eviction and prediction-based prefetching
 
 [HDFS and object storage](https://youtu.be/XehH3iJJy3Q) talk from Hortonworks:
+
 * Interesting summary of different usage patterns of Hadoop on cloud: 1) all I/O happens to HDFS, and HDFS stages data with blob store; 2) input data from blob store, output data written to HDFS and eventually copied to blob store; 3) both input and output I/O on blob store, HDFS only has temporary data.
 * Interesting summary of pros and cons of blob store and HDFS, including scalability, consistency, and locality
 * Connectors like ```s3a``` bridge the semantics gap between blob stores and HDFS, to some degree
@@ -80,6 +82,7 @@ Operationalizing YARN in the cloud talk from Qubole: [to be added]
 [HDFS Optimization Stabilization and Supportability](https://youtu.be/6Ny1lnYsjuQ) talk from Hortonworks has a good summary of recent detailed work on HDFS.
 
 [Over-committing YARN resources](https://youtu.be/hILD2g9putc) talk from Yahoo:
+
 * A lot of jobs are poorly configured, causing resources wastage
 * Static overcommit (configure containers to use more than OS offers) doesn't work just like "over-selling flight tickets"
 * ```NodeManager``` reports utlization to ```ResourceManager``` via heartbeats, to facilitate dynamic overcommitting
