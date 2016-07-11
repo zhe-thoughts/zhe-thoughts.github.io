@@ -12,7 +12,7 @@ title: Research Profile
 ### Ongoing Projects:
 * **[HDFS erasure coding](https://issues.apache.org/jira/browse/HDFS-7285)**
   - Presented as WiP and [poster](https://raw.githubusercontent.com/zhe-thoughts/zhe-thoughts.github.io/master/_figures/HDFS-EC-poster-FAST.pdf) at USENIX FAST '15
-* **Programmable file system metadata**
+* **[Programmable file system metadata](https://raw.githubusercontent.com/zhe-thoughts/zhe-thoughts.github.io/master/_figures/SOSP-WIP.pdf)**
   - Presented as WiP at ACM SOSP '13
 
 ### Selected Professional Activities:
