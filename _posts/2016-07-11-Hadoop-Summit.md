@@ -94,3 +94,5 @@ The Hive HBase metastore talk was also interesting. It is somewhat surprising th
 
 ### Streaming
 Streaming is quickly emerging as a major topic in big data analytics. Unfortunatelly I didn't have chance to attend many streaming talks. Will add details after watching some video recordings.
+
+{% include twitter_plug.html %}
