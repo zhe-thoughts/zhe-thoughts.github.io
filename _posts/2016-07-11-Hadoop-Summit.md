@@ -57,7 +57,7 @@ Apache Hadoop was initially designed with a single-master architecture. Many glo
 #### _Cloud_
 Although on-premise datacenters still run the lion's share of Hadoop deployments, it is an obvious trend to move big data workloads to public or private cloud platforms. ```HDInsight``` was mentioned a lot.
 
-[HDFS tiered storage](https://youtu.be/bD-h-PE73VQ) talk from Microsoft (AKA Tachyon-done-right):
+[HDFS tiered storage](https://youtu.be/bD-h-PE73VQ) talk from Microsoft (AKA HDFS-as-a-cache):
 
 * Emphasizes the problem of multiple clusters (even before moving to cloud)
 * Compared to other approaches (```DistCp```, application-manage multi-DC access), transparency is big win
