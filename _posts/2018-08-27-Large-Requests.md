@@ -24,3 +24,6 @@ Of course the above intuitive explanation is pretty rough. It has not considered
 ## Simple Mathematical Explanation
 Per [Pollaczek–Khinchine formula - Wikipedia](https://en.wikipedia.org/wiki/Pollaczek%E2%80%93Khinchine_formula), the average wait time in a service queue can be expressed as:
 
+<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8775d3fff838b07d162796199fbffdad0c6a0354"/>
+
+, where `Var(S)` is the variance of the service time distribution `S`.
