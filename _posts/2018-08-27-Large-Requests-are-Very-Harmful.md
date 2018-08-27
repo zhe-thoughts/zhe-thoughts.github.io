@@ -4,12 +4,13 @@ title: Impact of Large Requests in Shared Services
 ---
 
 # Impact of Large Requests in Shared Services
-Tl;DR: When an abnormally large request (takes *S* seconds to process) is issued to a shared service with frequency of *F*, its impact on the service overall performance grows in *square* relationship with *S* and also linearly with *F*. So, break up large requests as much as you can!
+## Tl;DR
+When an abnormally large request (takes *L* seconds to process) is issued to a shared service with frequency of *F*, its impact on the service overall performance grows in *square* relationship with *L* and also linearly with *F*. So, break up large requests as much as you can!
 
 ## Problem Statement
 Hadoop uses a single metadata server (`NameNode`) to keep track of all files and blocks in a cluster. The `NameNode` in a large Hadoop clusters is usually very heavily loaded — handling 10s of thousands of RPC requests per second.  It is therefore (arguably) the most likely source of cluster performance issues.
 
-From multiple severe cluster performance degradations, we have identified the root cause to /very infrequent, but very expensive/ requests to the `NameNode`.  Last year,  we optimized HDFS `Balancer` ’s  `GetBlocks` call to `NameNode` from 40 ms to a few ms (see [HDFS-11634 Optimize BlockIterator when iterating starts in the middle.](https://issues.apache.org/jira/browse/HDFS-11634)  for details). Although `GetBlocks` is only called a couple of times a second, this optimization very dramatically improved the average time `NameNode` can serve an RPC.
+From multiple severe cluster performance degradations, we have identified the root cause to /very infrequent, but very expensive/ requests to the `NameNode`.  Last year, my colleague Konstantin optimized HDFS `Balancer` ’s  `GetBlocks` call to `NameNode` from 40 ms to a few ms (see [HDFS-11634 Optimize BlockIterator when iterating starts in the middle.](https://issues.apache.org/jira/browse/HDFS-11634)  for details). Although `GetBlocks` is only called a couple of times a second, this optimization very dramatically improved the average time `NameNode` can serve an RPC.
 
 I have since been puzzled by this seemingly unproportional impact of infrequent-but-large requests. Think about it, if you make a 40 ms call twice a second, you would be “occupying” *8%* of the “total service capacity”, right?
 
@@ -31,4 +32,4 @@ Per [Pollaczek–Khinchine formula - Wikipedia](https://en.wikipedia.org/wiki/Po
 
 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/8775d3fff838b07d162796199fbffdad0c6a0354"/>
 
-, where `Var(S)` is the variance of the service time distribution `S`.
+, where `Var(S)` is the variance of the service time distribution `S`. In the situation being discussed here, the service time of the large requests *L* is several magnitudes higher than that of normal requets, therefore the variance of `Var(S)` is dominated by `L<sup>2</sup/` itself.
