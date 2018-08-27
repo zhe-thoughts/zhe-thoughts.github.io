@@ -1,3 +1,8 @@
+---
+layout: post
+title: Impact of Large Requests in Shared Services
+---
+
 # Impact of Large Requests in Shared Services
 Tl;DR: When an abnormally large request (takes *S* seconds to process) is issued to a shared service with frequency of *F*, its impact on the service overall performance grows in *square* relationship with *S* and also linearly with *F*. So, break up large requests as much as you can!
 
